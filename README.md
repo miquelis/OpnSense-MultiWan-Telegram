@@ -60,7 +60,7 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
       ```
       <br />
       - **sendTelegram.sh**
-       ```sh
+      ```sh
       chmod +x /usr/local/opnsense/scripts/monit/sendTelegram.sh
       ```
       <br />
