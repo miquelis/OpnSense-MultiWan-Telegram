@@ -46,7 +46,7 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
 1. Enable SSH on OpnSense and download the files<br />
    1.1 Enable SSH on OpnSense: System > Settings > Administration <br />
    1.2 Access OpnSense via SSH from terminal: ssh root@192.168.1.1. Replace root with your username and 192.168.1.1 with your OpnSense IP address.<br />
-   1.3 Navigate to the Monit service folder: `cd /usr/local/opnsense/scripts/OPNsense/Monit`<br />
+   1.3 Navigate to the Monit service folder: `cd /usr/local/opnsense/scripts/monit/`<br />
    1.4 Use fetch to download "gateway_multiwan" and "sendTelegram.sh' from GitHub:<br /> 
       `fetch https://github.com/macielmeireles/opnsense_gateways_status/blob/main/versions/stable/0.6/gateway_multiwan && fetch https://github.com/macielmeireles/opnsense_gateways_status/blob/main/versions/stable/0.6/sendTelegram.sh`<br />
 
@@ -71,7 +71,7 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
 6. Enable Script:<br />
    6.1 OPNsense, go to Services > Monit > Services and duplicate the pre-existing service called gateway_alert.<br />
    6.2 In the Duplicate Item dialog box, enter a name for the new service, such as "gateway_multiwan".<br />
-   6.3 In the Path field, enter the path to the shell script, such as `/usr/local/opnsense/scripts/OPNsense/Monit/gateway_multiwan`.<br />
+   6.3 In the Path field, enter the path to the shell script, such as `/usr/local/opnsense/scripts/monit/gateway_multiwan`.<br />
    6.4 In Tests field, uncheck "NonZeroStatus" and check "ChangedStatus".<br />
    6.5 Click Save and Apply.<br />
 
@@ -117,7 +117,7 @@ Para funcionar, o script precisa ser adicionado em seu opnSense e para ser execu
 1. **Ative o SSH no OpnSense e baixe os arquivos**<br /> 
    1.1 Ative o SSH no OpnSense: Sistema > Configurações > Administração<br /> 
    1.2 Acesse o OpnSense via SSH a partir do terminal, exemplo: `ssh root@192.168.1.1` <br />
-   1.3 Navegue até a pasta do serviço Monit: `cd /usr/local/opnsense/scripts/OPNsense/Monit`<br />
+   1.3 Navegue até a pasta do serviço Monit: `cd /usr/local/opnsense/scripts/monit/`<br />
    1.4 Use fetch para baixar "gateway_multiwan" e "sendTelegram.sh' do GitHub:<br />
           `fetch https://github.com/macielmeireles/opnsense_gateways_status/blob/main/versions/stable/0.6/gateway_multiwan && fetch https://github.com/macielmeireles/opnsense_gateways_status/blob/main/versions/stable/0.6/sendTelegram.sh`<br />
 
@@ -142,7 +142,7 @@ Para funcionar, o script precisa ser adicionado em seu opnSense e para ser execu
 6. **Ative o Script**<br />
    6.1 No OPNsense, vá para Serviços > Monit > Serviços e duplique o serviço pré-existente chamado gateway_alert.<br />
    6.2 Na caixa de diálogo Duplicar Item, insira um nome para o novo serviço, como "gateway_multiwan".<br />
-   6.3 No campo Caminho, insira o caminho para o script shell, como `/usr/local/opnsense/scripts/OPNsense/Monit/gateway_multiwan`.<br />
+   6.3 No campo Caminho, insira o caminho para o script shell, como `/usr/local/opnsense/scripts/monit/gateway_multiwan`.<br />
    6.4 No campo Testes, desmarque "NonZeroStatus" e marque "ChangedStatus".<br />
    6.5 Clique em Salvar e Aplicar.<br />
 
