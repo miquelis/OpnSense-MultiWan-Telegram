@@ -46,29 +46,29 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
 1. Enable SSH on OpnSense and download the files<br />
    1.1 Enable SSH on OpnSense: System > Settings > Administration <br />
    1.2 Access OpnSense via SSH from terminal: ssh root@192.168.1.1. Replace root with your username and 192.168.1.1 with your OpnSense IP address.<br />
-   1.3 Navigate to the Monit service folder: `cd /usr/local/opnsense/scripts/monit/`<br />
-   1.4 Use fetch to download "gateway_multiwan" and "sendTelegram.sh' from GitHub:<br /> 
-      `fetch https://github.com/macielmeireles/opnsense_gateways_status/blob/main/versions/stable/0.6/gateway_multiwan && fetch https://github.com/macielmeireles/opnsense_gateways_status/blob/main/versions/stable/0.6/sendTelegram.sh`<br />
+   1.3 Use fetch to download `install_multiwan.sh` from GitHub: `fetch https://github.com/miquelis/OpnSense-MultiWan-Telegram/blob/6feda9e9675795b128a90a5fad28544901d2bbf8/versions/stable/0.6/install_multiwan.sh`<br />
+   1.4 Set +x permission on the files:<br /> `chmod +x install_multiwan.sh`
+   1.5 Run sh: `sh install_multiwan.sh`
 
-2. Set Permissions:<br />
+3. Set Permissions:<br />
    2.1 Set +x permission on the files:<br /> `chmod +x gateway_multiwan sendTelegram.sh`<br />
 
-3. Telegram Configuration:<br />
+4. Telegram Configuration:<br />
    3.1 Create a Telegram group.<br />
    3.2 Create a bot with "BotFather".<br />
    3.3 Note down the bot token.<br />
    3.4 Add the bot and yourself to the group.<br />
    3.5 Get the group ID from the URL.<br />
 
-4. Configure sendTelegram.sh:<br />
+5. Configure sendTelegram.sh:<br />
    4.1 Open sendTelegram.sh in a text editor.<br />
    4.2 Update TOKEN and CHAT_ID with your bot token and group ID.<br />
 
-5. Enable Monit Service:<br />
+6. Enable Monit Service:<br />
    5.1 In OPNsense, go to Services > Monit > Services and click on Enable Monit.<br />
    5.2 Set your preferred polling interval.<br />
 
-6. Enable Script:<br />
+7. Enable Script:<br />
    6.1 OPNsense, go to Services > Monit > Services and duplicate the pre-existing service called gateway_alert.<br />
    6.2 In the Duplicate Item dialog box, enter a name for the new service, such as "gateway_multiwan".<br />
    6.3 In the Path field, enter the path to the shell script, such as `/usr/local/opnsense/scripts/monit/gateway_multiwan`.<br />
