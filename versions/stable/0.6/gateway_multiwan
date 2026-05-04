@@ -19,7 +19,7 @@ define("EXIT_CODE_TOO_MANY_GATEWAYS", 256); // Exit code when there are too many
 define("SHOW_DETAILS", true); // Whether to show details about each gateway
 define("SEND_TELEGRAM", true); // Whether to send a Telegram message with the gateway statuses
 define("USE_ICONS", true); // Whether to use icons in the Telegram message and details output
-define("TELEGRAM_SCRIPT_PATH", "/usr/local/opnsense/scripts/OPNsense/Monit/sendTelegram.sh"); // Path to the Telegram script
+define("TELEGRAM_SCRIPT_PATH", "/usr/local/opnsense/scripts/monit/sendTelegram.sh"); // Path to the Telegram script
 define("LAST_STATUS_FILE", "gateway_multiwan_laststatus.txt"); // File to store the last status of each gateway
 
 $ignoredGateways = ["NOME_DO_GATEWAY_PARA_IGNORAR"];
