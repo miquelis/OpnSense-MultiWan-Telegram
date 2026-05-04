@@ -54,16 +54,16 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
 
 2. Set Permissions:<br />
    2.1 Set +x permission on the files: <br />
-   
-   ```sh
-   chmod +x /usr/local/opnsense/scripts/monit/gateway_multiwan sendTelegram.sh
-   ```
-   <br />
-   
-    ```sh
-   chmod +x /usr/local/opnsense/scripts/monit/sendTelegram.sh
-   ```
-   <br />
+      - **gateway_multiwan**
+      ```sh
+      chmod +x /usr/local/opnsense/scripts/monit/gateway_multiwan
+      ```
+      <br />
+      - **sendTelegram.sh**
+       ```sh
+      chmod +x /usr/local/opnsense/scripts/monit/sendTelegram.sh
+      ```
+      <br />
 
 3. Telegram Configuration:<br />
    3.1 Create a Telegram group.<br />
@@ -77,7 +77,6 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
    ```sh
    vi /usr/local/opnsense/scripts/monit/sendTelegram.sh
    ```
-   <br />
    4.2 Update TOKEN and CHAT_ID with your bot token and group ID.<br />
 
 5. Enable Monit Service:<br />
