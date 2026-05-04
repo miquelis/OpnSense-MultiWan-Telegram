@@ -42,16 +42,19 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
    ```   
    <br />
    1.4 Set +x permission on the files:<br />
+   
    ```sh
       chmod +x install_multiwan.sh
    ```
+   
    1.5 Run sh:
    ```sh
-   sh install_multiwan.sh
+      sh install_multiwan.sh
    ```
 
 3. Set Permissions:<br />
-   2.1 Set +x permission on the files:<br />
+   2.1 Set +x permission on the files: <br />
+   
    ```sh
       chmod +x gateway_multiwan sendTelegram.sh
    ```
