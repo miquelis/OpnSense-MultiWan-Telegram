@@ -58,13 +58,10 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
       ```sh
       chmod +x /usr/local/opnsense/scripts/monit/gateway_multiwan
       ```
-      <br />
       - **sendTelegram.sh**
       ```sh
       chmod +x /usr/local/opnsense/scripts/monit/sendTelegram.sh
       ```
-      <br />
-
 3. Telegram Configuration:<br />
    3.1 Create a Telegram group.<br />
    3.2 Create a bot with "BotFather".<br />
