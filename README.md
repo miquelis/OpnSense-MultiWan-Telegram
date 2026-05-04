@@ -74,13 +74,17 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
    ```sh
    vi /usr/local/opnsense/scripts/monit/sendTelegram.sh
    ```
+   or nano (`pkg install -y nano`)
+    ```sh
+   nano /usr/local/opnsense/scripts/monit/sendTelegram.sh
+   ```
    4.2 Update TOKEN and CHAT_ID with your bot token and group ID.<br />
 
-5. Enable Monit Service:<br />
+6. Enable Monit Service:<br />
    5.1 In OPNsense, go to Services > Monit > Services and click on Enable Monit.<br />
    5.2 Set your preferred polling interval.<br />
 
-6. Enable Script:<br />
+7. Enable Script:<br />
    6.1 OPNsense, go to Services > Monit > Services and duplicate the pre-existing service called gateway_alert.<br />
    6.2 In the Duplicate Item dialog box, enter a name for the new service, such as "gateway_multiwan".<br />
    6.3 In the Path field, enter the path to the shell script, such as `/usr/local/opnsense/scripts/monit/gateway_multiwan`.<br />
