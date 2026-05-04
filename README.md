@@ -13,7 +13,7 @@ This project provides two scripts for monitoring the status of gateways in OPNse
 The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, or `unknown` status of all gateways found in opnSense. If any of them change, it sends an alert using the `sendTelegram.sh` file to a group, via a Telegram bot. If the SMTP alert is configured, it will also be sent to your email. For it to work, the script needs to be added to your opnSense and set up to be executed and triggered by events through the already included package called Monit.
 
 
-## Requirements
+### Requirements
 - OPNsense Firewall
 - SSH terminal
 - Download the two files from this GitHub repository (stable version) to your machine with OPNsense
@@ -21,7 +21,7 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
 
 
 
-## Quick Installation Guide
+### Quick Installation Guide
 1. Enable SSH on OpnSense
 2. Download Files
 3. Set Permissions
@@ -31,7 +31,7 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
 7. Enable Script
 8. Test
 
-## Detailed Installation Guide
+### Detailed Installation Guide
 
 1. Enable SSH on OpnSense and download the files<br />
    1.1 Enable SSH on OpnSense: System > Settings > Administration <br />
@@ -91,10 +91,10 @@ The `gateway_multiwan` script monitors the `offline`, `packet loss`, `online`, o
    6.4 In Tests field, uncheck "NonZeroStatus" and check "ChangedStatus".<br />
    6.5 Click Save and Apply.<br />
 
-Testing the Script<br />
+### Testing the Script<br />
 To test the script, manually disable a WAN link in OPNsense. You should receive a Telegram alert.<br />
 
-For more details on how to get your bot token in Telegram[^1^][2] or how to get your chat ID in Telegram, you can refer to these links.<br />
+For more details on how to get your bot token in Telegram[^1][^2] or how to get your chat ID in Telegram, you can refer to these links.<br />
 
 <sub>(1) How to Generate a Token for Telegram Bot API | https://medium.com/geekculture/generate-telegram-token-for-bot-api-d26faf9bf064</sub> <br />
 <sub>(2) How to Find a Chat ID in Telegram | https://www.alphr.com/find-chat-id-telegram/ </sub> <br />
